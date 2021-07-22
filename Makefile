@@ -1,5 +1,5 @@
 NAME = libft.a
-SOURCES = hello.c
+SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
@@ -16,10 +16,13 @@ MSG2 = @echo "Cleaned ✔︎"
 # This sample command adds the object files *.o static library libft.a, creating libft.a if it doesn't already exist.
 ARCHIVE = @ar -rc
 
-# Compile files following above rules
-${NAME}: ${OBJECTS}
-	${CC} -c ${SOURCES} -o ${OBJECTS} ${CFLAGS}
+# Create an index for the library
+RANLIB = @ranlib
+
+# Compile files following above rules 	${CC} -o ${NAME} ${OBJECTS}
+$(NAME): ${OBJECTS}
 	${ARCHIVE} ${NAME} ${OBJECTS}
+	${RANLIB} ${NAME}
 	${MSG1}
 
 # Default all command to compile
