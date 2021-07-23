@@ -8,4 +8,5 @@ int	ft_isprint(int c);
 unsigned int	ft_strlen(char *c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
+int	ft_strncmp(const char *s1, const char *s2, unsigned int n);
 #endif
