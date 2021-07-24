@@ -7,7 +7,7 @@ SOURCES += ft_tolower.c ft_toupper.c ft_strncmp.c
 SOURCES += ft_memset.c ft_bzero.c ft_memcpy.c
 SOURCES += ft_memmove.c ft_strlcpy.c ft_strlcat.c
 SOURCES += ft_strchr.c ft_strrchr.c ft_strncmp.c
-SOURCES += ft_memchr.c
+SOURCES += ft_memchr.c ft_memcmp.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
