@@ -5,7 +5,7 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c
 SOURCES += ft_isascii.c ft_isprint.c ft_strlen.c
 SOURCES += ft_tolower.c ft_toupper.c ft_strncmp.c
 SOURCES += ft_memset.c ft_bzero.c ft_memcpy.c
-SOURCES += ft_memmove.c
+SOURCES += ft_memmove.c ft_strlcpy.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
