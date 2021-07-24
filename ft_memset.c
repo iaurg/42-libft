@@ -6,7 +6,9 @@
 */
 
 // var memory  Receive the pointer and allow changes on it to move on
-void	*ft_memset(void *s, int c, unsigned int n)
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned int	counter;
 	unsigned char	*memory;

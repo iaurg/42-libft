@@ -1,6 +1,8 @@
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned int	x;
+	size_t	x;
 
 	x = 0;
 	while (x < n && (*s1 != '\0' || *s2 != '\0'))
