@@ -4,6 +4,7 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c
 # Add more files to sources
 SOURCES += ft_isascii.c ft_isprint.c ft_strlen.c
 SOURCES += ft_tolower.c ft_toupper.c ft_strncmp.c
+SOURCES += ft_memset.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
