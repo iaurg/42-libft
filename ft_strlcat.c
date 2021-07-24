@@ -1,24 +1,31 @@
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+/*
+strlcat() appends string src to the end of dst.  It will append
+at most dstsize - strlen(dst) - 1 characters.
+It will then NUL-terminate, unless dstsize is 0 or the
+original dst string was longer than dstsize
+(in practice this should not happen as it means
+that either dstsize is incorrect or that dst is not a proper string).
+If the src and dst strings overlap, the behavior is undefined.
+*/
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+	size_t	dst_len;
+	size_t	hold;
+	size_t	str_len;
 
-	char			*memory_dst;
-	char			*memory_src;
-	size_t			counter;
-	size_t			dst_len;
-
-	memory_dst = (char *) dst;
-	memory_src = (char *) src;
-	dst_len = ft_strlen(memory_dst);
-	counter = size;
-	while (counter-- != 0 && memory_dst)
-		memory_dst++;
-	if (counter == 0)
-		return (dst_len + ft_strlen(memory_src));
-
-	while (counter-- > (size - (dst_len - 1)))
-		*memory_dst++ = *memory_src++;
-	*memory_dst = '\0';
-	return (dst_len + ft_strlen(memory_src));
+	str_len = ft_strlen(src);
+	dst_len = 0;
+	while (dst_len < dstsize && dst[dst_len])
+		dst_len++;
+	hold = dst_len;
+	while (src[dst_len - hold] && (dst_len + 1) < dstsize)
+	{
+		dst[dst_len] = src[dst_len - hold];
+		dst_len++;
+	}
+	if (hold < dstsize)
+		dst[dst_len] = '\0';
+	return (hold + str_len);
 }
