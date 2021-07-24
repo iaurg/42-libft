@@ -8,14 +8,14 @@
 // var memory  Receive the pointer and allow changes on it to move on
 #include "libft.h"
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned int	counter;
 	unsigned char	*memory;
 
 	counter = 0;
-	memory = s;
-	while (n > counter)
+	memory = b;
+	while (len > counter)
 	{
 		memory[counter] = c;
 		counter++;

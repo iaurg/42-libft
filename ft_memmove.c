@@ -1,23 +1,23 @@
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	unsigned char	*memory_src;
-	unsigned char	*memory_dest;
+	unsigned char	*memory_dst;
 	size_t			counter;
 
 	memory_src = (unsigned char *)src;
-	memory_dest = (unsigned char *)dest;
-	counter = n;
-	if (memory_src < memory_dest)
+	memory_dst = (unsigned char *)dst;
+	counter = len;
+	if (memory_src < memory_dst)
 	{
 		while (counter)
 		{
 			counter--;
-			memory_dest[counter] = memory_src[counter];
+			memory_dst[counter] = memory_src[counter];
 		}
-		return (dest);
+		return (dst);
 	}
-	ft_memcpy(memory_dest, memory_src, n);
-	return (dest);
+	ft_memcpy(memory_dst, memory_src, len);
+	return (dst);
 }

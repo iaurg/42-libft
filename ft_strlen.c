@@ -1,9 +1,11 @@
-unsigned int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
 {
-	unsigned int	counter;
+	size_t	counter;
 
 	counter = 0;
-	while (str[counter])
+	while (s[counter])
 		counter++;
 	return (counter);
 }
