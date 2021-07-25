@@ -15,7 +15,7 @@ OBJECTS = ${SOURCES:.c=.o}
 # @ supress commands to show in terminal
 RM = @rm -f
 
-CC = @gcc
+CC = @clang
 
 CFLAGS = -Wall -Wextra -Werror
 MSG1 = @echo "Compiled ✔︎"
