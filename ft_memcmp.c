@@ -22,4 +22,11 @@ The memcmp() function returns zero	if the two strings are identical, oth-
 erwise returns the	difference between the first two differing bytes
 (treated as unsigned char values, so that `\200' is greater than `\0',
 for example).  Zero-length	strings	are always identical.
+
+while (len--)
+{
+	if (convert_b1[len] != convert_b2[len])
+		return (convert_b1[len] - convert_b2[len]);
+}
+return (0);
 */
