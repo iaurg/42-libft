@@ -7,7 +7,7 @@ char	*ft_strrchr(const char	*s, int	c)
 	char	*found_c;
 
 	find_c = c;
-	found_c = '\0';
+	found_c = NULL;
 	s_len = ft_strlen(s);
 	if (c == '\0')
 		return ((char *)s + s_len);

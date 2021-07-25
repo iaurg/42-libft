@@ -8,7 +8,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*s != find_c)
 	{
 		if (*s == '\0')
-			return ('\0');
+			return (NULL);
 		s++;
 	}
 	return ((char *)s);
