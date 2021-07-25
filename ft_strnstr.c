@@ -1,24 +1,22 @@
 #include "libft.h"
+
 char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	char	*convert_big;
-	char	*convert_little;
+	char		*convert_big;
+	char		*convert_little;
+	size_t		little_len;
 
 	convert_big = (char *)big;
 	convert_little = (char *)little;
-
-	if (len == 0)
+	if (!convert_little)
 		return (convert_big);
-	// Busca apenas enquanto < len
-	// strchr strncmp
-	while (len--)
+	little_len = ft_strlen(convert_little);
+	while (little_len <= len-- && convert_big)
 	{
-		// while?
+		if (!ft_strncmp(convert_big, convert_little, little_len))
+			return (convert_big);
+		convert_big++;
 	}
-	// se não houver little em nenhum local de big, return null
-
-	// se encontrar o little dentro de big, retorna o ponteiro da primeira letra de little
-
 	return (NULL);
 }
 
