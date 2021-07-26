@@ -1,15 +1,24 @@
 #include "libft.h"
 
+#include "libft.h"
+
 int	ft_memcmp(const void *b1, const void *b2, size_t len)
 {
-	const char	*convert_b1;
-	const char	*convert_b2;
+	unsigned char	*convert_b1;
+	unsigned char	*convert_b2;
 
-	convert_b1 = (const char *)b1;
-	convert_b2 = (const char *)b2;
+	convert_b1 = (unsigned char *)b1;
+	convert_b2 = (unsigned char *)b2;
 	if (len == 0)
 		return (0);
-	return (ft_strncmp (convert_b1, convert_b2, len));
+	while (len-- > 0)
+	{
+		if (*convert_b1 != *convert_b2)
+			return ((int)(*convert_b1 - *convert_b2));
+		convert_b1++;
+		convert_b2++;
+	}
+	return (0);
 }
 
 /*
