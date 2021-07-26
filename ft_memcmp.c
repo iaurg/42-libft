@@ -1,7 +1,5 @@
 #include "libft.h"
 
-#include "libft.h"
-
 int	ft_memcmp(const void *b1, const void *b2, size_t len)
 {
 	unsigned char	*convert_b1;
