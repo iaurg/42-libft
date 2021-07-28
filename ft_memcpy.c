@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/28 07:37:19 by itaureli          #+#    #+#             */
+/*   Updated: 2021/07/28 07:37:19 by itaureli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /*
 The  memcpy() function copies n bytes from memory area src to memory area dst.
 The memory areas must not overlap.  Use memmove(3) if the memory areas do over‐

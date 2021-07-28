@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/07/28 07:33:03 by iaurg             #+#    #+#             */
+/*   Updated: 2021/07/28 07:38:03 by itaureli         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static	unsigned int	ft_size(size_t str_len, size_t start, size_t max_len)
@@ -35,18 +47,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ft_strlcpy (substring_ptr, &s[start], new_max_len + 1);
 	return (substring_ptr);
 }
-
-/*----------------------------------------------------------------
-s = "Hello" -- 4
-start = 6
-len = 4
-result="llo W"
-
-str = "lorem ipsum dolor sit amet";
-ft_substr(str, 0, 10)
-lorem ipsum
-lorem ipsu
-*/
 
 /*
 Parameters
