@@ -9,7 +9,7 @@ SOURCES += ft_memmove.c ft_strlcpy.c ft_strlcat.c
 SOURCES += ft_strchr.c ft_strrchr.c ft_strncmp.c
 SOURCES += ft_memchr.c ft_memcmp.c ft_strnstr.c
 SOURCES += ft_atoi.c ft_calloc.c ft_strdup.c
-SOURCES += ft_substr.c ft_strjoin.c
+SOURCES += ft_substr.c ft_strjoin.c ft_strtrim.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
