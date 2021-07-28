@@ -1,28 +1,38 @@
 #include "libft.h"
 
+static	unsigned int	ft_size(size_t str_len, size_t start, size_t max_len)
+{
+	unsigned int	holder;
+
+	if (start < str_len)
+	{
+		holder = str_len - start;
+	}
+	if (start >= str_len)
+	{
+		holder = 0;
+	}
+	if (holder > max_len)
+	{
+		holder = max_len;
+	}
+	return (holder);
+}
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*substring_ptr;
-	size_t	counter;
-	size_t	s_len;
+	char			*substring_ptr;
+	unsigned int	new_max_len;
+	size_t			s_len;
 
-	counter = 0;
-	s_len = (unsigned int) ft_strlen(s);
-	// start 100 len 1
-	if (len > s_len)
-		len = s_len;
-	substring_ptr = ft_calloc(sizeof(char), len + 1);
-	if (!s || !substring_ptr)
+	if (!s)
 		return (NULL);
-	if (start > s_len)
-		return (substring_ptr);
-	ft_strlcpy(substring_ptr, &s[start], len + 1);
-	//ft_memcpy(substring_ptr, &s[start], len + 1);
-	/*
-	while (len-- && s[counter])
-		substring_ptr[counter++] = s[start++];
-	*/
-	// substring_ptr[len] = '\0';
+	s_len = (unsigned int) ft_strlen(s);
+	new_max_len = ft_size(s_len, start, len);
+	substring_ptr = ft_calloc(sizeof(char), new_max_len + 1);
+	if (!substring_ptr)
+		return (NULL);
+	ft_strlcpy (substring_ptr, &s[start], new_max_len + 1);
 	return (substring_ptr);
 }
 
