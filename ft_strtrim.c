@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 09:03:46 by itaureli          #+#    #+#             */
-/*   Updated: 2021/07/28 22:16:32 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/07/29 08:56:49 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,28 +18,21 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	str_len;
 	size_t	start;
 	size_t	end;
-	char	*str_cpy;
 
 	if(!s1 || !set)
 		return (NULL);
 	if(!*s1 || !*set)
-		return (ft_strdup(""));
+		return (ft_strdup(s1));
 	str_len = ft_strlen(s1) + 1;
-	str_cpy = malloc(str_len * sizeof(char));
-	ft_strlcpy(str_cpy, s1, str_len);
-	while (*str_cpy && ft_strchr(set, *str_cpy))
-		str_cpy++;
-	str_len = ft_strlen(str_cpy);
 	start = 0;
-	end = str_len + 1;
-	while (ft_strchr(set, str_cpy[str_len]))
-	{
-		str_len--;
+	while (s1[start] && ft_strchr(set, s1[start]))
+		start++;
+	end = str_len;
+	while (start < end && ft_strchr(set, s1[end - 1]))
 		end--;
-	}
-	return (ft_substr(str_cpy, start, end));
+	return (ft_substr(s1, start, (end - start)));
 }
-
+/*
 int main(void)
 {
 	printf("3 - %s",ft_strtrim("tripouille   xxx", " x"));
@@ -58,7 +51,7 @@ int main(void)
 	printf("\n");
 	return 0;
 }
-
+*/
 /*
 string = "c eu sei o que acontece"
 
