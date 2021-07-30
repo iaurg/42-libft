@@ -11,7 +11,7 @@ SOURCES += ft_memchr.c ft_memcmp.c ft_strnstr.c
 SOURCES += ft_atoi.c ft_calloc.c ft_strdup.c
 SOURCES += ft_substr.c ft_strjoin.c ft_strtrim.c
 SOURCES += ft_split.c ft_putchar_fd.c ft_putstr_fd.c
-SOURCES += ft_putendl_fd.c
+SOURCES += ft_putendl_fd.c ft_putnbr_fd.c
 
 # Use same files from sources, but change .c to .o
 OBJECTS = ${SOURCES:.c=.o}
