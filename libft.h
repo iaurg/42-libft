@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 07:38:35 by itaureli          #+#    #+#             */
-/*   Updated: 2021/07/29 21:12:22 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/07/29 21:19:51 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,5 @@ char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s1, char const *set);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
+void			ft_putendl_fd(char *s, int fd);
 #endif
