@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 21:14:27 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/01 14:15:52 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/01 15:11:13 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putstr_fd(char *s, int fd)
 {
 	if (!s)
-		return;
+		return ;
 	while (*s)
 		ft_putchar_fd(*s++, fd);
 }
