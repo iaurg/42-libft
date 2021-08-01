@@ -6,13 +6,13 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/30 08:22:37 by itaureli          #+#    #+#             */
-/*   Updated: 2021/07/30 08:37:38 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/01 13:26:40 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int,char*))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	counter;
 
