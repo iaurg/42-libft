@@ -26,7 +26,7 @@ CFLAGS = -Wall -Wextra -Werror
 MSG1 = @echo "Compiled ✔︎"
 MSG2 = @echo "Cleaned ✔︎"
 
-# This sample command adds the object files *.o static library libft.a, creating libft.a if it doesn't already exist.
+# Adds object files *.o static library libft.a, creating libft.a if it no exist.
 ARCHIVE = @ar -rc
 
 # Create an index for the library
