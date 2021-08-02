@@ -32,9 +32,16 @@ ARCHIVE = @ar -rc
 # Create an index for the library
 RANLIB = @ranlib
 
+BONUS = ft_lstnew.c
+BONUS_OBJECTS = $(BONUS:.c=.o)
 # Compile files following above rules 	${CC} -o ${NAME} ${OBJECTS}
 $(NAME): ${OBJECTS}
 	${ARCHIVE} ${NAME} ${OBJECTS}
+	${RANLIB} ${NAME}
+	${MSG1}
+
+bonus: ${BONUS_OBJECTS}
+	${ARCHIVE} ${NAME} ${BONUS_OBJECTS}
 	${RANLIB} ${NAME}
 	${MSG1}
 
@@ -43,7 +50,7 @@ all: ${NAME}
 
 # Clean generated .o files
 clean:
-	${RM} ${OBJECTS}
+	${RM} ${OBJECTS} ${BONUS_OBJECTS}
 	${MSG2}
 
 # Force clean all files generated on all
