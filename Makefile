@@ -32,7 +32,7 @@ ARCHIVE = @ar -rc
 # Create an index for the library
 RANLIB = @ranlib
 
-BONUS = ft_lstnew.c
+BONUS = ft_lstnew.c ft_lstadd_front.c
 BONUS_OBJECTS = $(BONUS:.c=.o)
 # Compile files following above rules 	${CC} -o ${NAME} ${OBJECTS}
 $(NAME): ${OBJECTS}

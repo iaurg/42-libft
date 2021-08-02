@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 07:38:35 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/01 22:46:20 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/02 07:17:39 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,5 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_itoa(int n);
 char			**ft_split(char const *s, char c);
 t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
 #endif
