@@ -33,7 +33,7 @@ ARCHIVE = @ar -rc
 RANLIB = @ranlib
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
-BONUS += ft_lstlast.c
+BONUS += ft_lstlast.c ft_lstadd_back.c
 
 BONUS_OBJECTS = $(BONUS:.c=.o)
 
