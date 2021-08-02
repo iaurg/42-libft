@@ -33,7 +33,10 @@ ARCHIVE = @ar -rc
 RANLIB = @ranlib
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+BONUS += ft_lstlast.c
+
 BONUS_OBJECTS = $(BONUS:.c=.o)
+
 # Compile files following above rules 	${CC} -o ${NAME} ${OBJECTS}
 $(NAME): ${OBJECTS}
 	${ARCHIVE} ${NAME} ${OBJECTS}
