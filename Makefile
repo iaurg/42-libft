@@ -34,6 +34,7 @@ RANLIB = @ranlib
 
 BONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
 BONUS += ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c
+BONUS += ft_lstclear.c
 
 BONUS_OBJECTS = $(BONUS:.c=.o)
 
