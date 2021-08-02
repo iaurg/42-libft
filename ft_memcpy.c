@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 07:37:19 by itaureli          #+#    #+#             */
-/*   Updated: 2021/07/28 07:37:19 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/01 20:53:56 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ unsigned char *memory_src; redeclare memory to get memory value
 */
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t len)
 {
 	unsigned char	*memory_src;
 	unsigned char	*memory_dst;
@@ -31,7 +31,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	memory_src = (unsigned char *)src;
 	memory_dst = (unsigned char *)dst;
 	counter = 0;
-	while (n > counter)
+	while (len > counter)
 	{
 		memory_dst[counter] = memory_src[counter];
 		counter++;
