@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/28 07:33:03 by iaurg             #+#    #+#             */
-/*   Updated: 2021/08/01 15:35:51 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/01 22:06:43 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*substring_ptr;
 	unsigned int	new_max_len;
-	size_t			s_len;
+	size_t			str_len;
 
 	if (!s)
 		return (NULL);
-	s_len = (unsigned int) ft_strlen(s);
-	new_max_len = ft_size(s_len, start, len);
-	substring_ptr = ft_calloc(sizeof(char), new_max_len + 1);
+	str_len = (unsigned int) ft_strlen(s);
+	new_max_len = ft_size(str_len, start, len) + 1;
+	substring_ptr = ft_calloc(new_max_len, sizeof(char));
 	if (!substring_ptr)
 		return (NULL);
-	ft_strlcpy (substring_ptr, &s[start], new_max_len + 1);
+	ft_strlcpy (substring_ptr, &s[start], new_max_len);
 	return (substring_ptr);
 }
 
