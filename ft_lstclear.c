@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 09:04:15 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/02 09:40:18 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/02 09:50:50 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*lst_holder;
 	t_list	*element;
 
-	if (*lst == NULL)
+	if (!*lst)
 		return ;
 	element = *lst;
-	while (element != NULL)
+	while (element)
 	{
 		lst_holder = element->next;
 		ft_lstdelone(element, del);

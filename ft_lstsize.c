@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 07:56:16 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/02 08:06:54 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/02 09:49:01 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_lstsize(t_list *lst)
 
 	lst_size = 0;
 	lst_nav = lst;
-	while (lst_nav != NULL)
+	while (lst_nav)
 	{
 		lst_size++;
 		lst_nav = lst_nav->next;
