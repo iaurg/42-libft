@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 08:08:25 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/02 08:16:29 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/02 09:48:10 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ t_list	*ft_lstlast(t_list *lst)
 	t_list	*lst_position;
 	t_list	*last_lst;
 
+	if (lst == NULL)
+		return (NULL);
 	lst_position = lst;
 	while (lst_position != NULL)
 	{
