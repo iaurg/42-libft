@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 22:17:38 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/03 15:35:54 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/03 15:48:00 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		new_element = ft_lstnew(f(lst->content));
 		if (!new_element)
 			ft_lstclear (&new_element, (*del));
-		ft_lstadd_back(&new_lst, new_element);
+		else
+			ft_lstadd_back(&new_lst, new_element);
 		lst = lst->next;
 	}
 	return (new_lst);
