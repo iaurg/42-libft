@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 22:17:38 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/03 15:48:00 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/03 15:51:58 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*new_lst;
 	t_list	*new_element;
 
-	if (!lst || !f || !del)
+	if (!lst)
 		return (NULL);
 	new_lst = NULL;
 	while (lst)
