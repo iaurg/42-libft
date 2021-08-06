@@ -6,7 +6,7 @@
 /*   By: itaureli <itaureli@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/29 08:58:18 by itaureli          #+#    #+#             */
-/*   Updated: 2021/08/01 13:30:45 by itaureli         ###   ########.fr       */
+/*   Updated: 2021/08/06 07:35:13 by itaureli         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ char	**ft_split(char const *s, char c)
 	size_t		array_size;
 	size_t		counter;
 
+	if (!s)
+		return (NULL);
 	array_size = set_array_size(s, c);
 	final_array = malloc(sizeof(char *) * (array_size + 1));
 	if (!final_array)
